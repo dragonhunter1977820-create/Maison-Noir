@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience world-class fine dining at Maison Noir. Reserve your table today and enjoy premium cuisine, handcrafted dishes, and unforgettable luxury." />
+  <meta name="keywords" content="luxury restaurant, fine dining, Michelin star, premium cuisine, Maison Noir, reservation" />
+  <meta property="og:title" content="Maison Noir | Luxury Fine Dining Restaurant" />
+  <meta property="og:description" content="Experience world-class fine dining at Maison Noir. Reserve your table today." />
+  <meta property="og:type" content="website" />
+  <title>Maison Noir | Luxury Fine Dining Restaurant</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <img src="images/logo.png" alt="Maison Noir Logo" class="loader-logo" />
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Preparing Your Experience</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.png" alt="Maison Noir" />
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#reservation" class="nav-link">Reservations</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#reservation" class="btn btn-gold nav-cta">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul>
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#menu" class="mobile-nav-link">Menu</a></li>
+        <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+        <li><a href="#reservation" class="mobile-nav-link">Reservations</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <a href="#reservation" class="btn btn-gold">Book Now</a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="images/hero_interior.png" alt="Maison Noir Interior" class="hero-image" id="heroImage" />
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-tag reveal-up">
+          <span class="gold-line"></span>
+          <span>Fine Dining Experience</span>
+          <span class="gold-line"></span>
+        </div>
+        <h1 class="hero-heading reveal-up">
+          Where Culinary Art<br />
+          <em>Meets Timeless</em><br />
+          Luxury
+        </h1>
+        <p class="hero-desc reveal-up">Reserve your table and indulge in handcrafted cuisine, exceptional wines, and unforgettable moments.</p>
+        <div class="hero-buttons reveal-up">
+          <a href="#reservation" class="btn btn-gold btn-shine" id="heroReserveBtn">
+            <i class="fa-regular fa-calendar"></i> Reserve Table
+          </a>
+          <a href="#menu" class="btn btn-ghost" id="heroMenuBtn">
+            <i class="fa-solid fa-utensils"></i> Explore Menu
+          </a>
+        </div>
+        <div class="hero-awards reveal-up">
+          <div class="award-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Michelin Star</span>
+          </div>
+          <div class="award-divider"></div>
+          <div class="award-item">
+            <i class="fa-solid fa-trophy"></i>
+            <span>Best Fine Dining 2024</span>
+          </div>
+          <div class="award-divider"></div>
+          <div class="award-item">
+            <i class="fa-solid fa-wine-glass"></i>
+            <span>Top Wine List</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal-up">
+        <div class="reservation-card glass-card">
+          <div class="res-card-header">
+            <div class="gold-ornament">◆</div>
+            <h3>Reserve Your Table</h3>
+            <p>Exclusive dining experience awaits</p>
+          </div>
+          <form class="res-card-form" id="heroResForm">
+            <div class="form-group">
+              <label><i class="fa-regular fa-user"></i> Full Name</label>
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label><i class="fa-regular fa-calendar"></i> Date</label>
+              <input type="date" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fa-regular fa-clock"></i> Time</label>
+                <select>
+                  <option>7:00 PM</option>
+                  <option>7:30 PM</option>
+                  <option>8:00 PM</option>
+                  <option>8:30 PM</option>
+                  <option>9:00 PM</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><i class="fa-solid fa-users"></i> Guests</label>
+                <select>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                  <option>5 Guests</option>
+                  <option>6+ Guests</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full btn-shine">
+              <i class="fa-solid fa-concierge-bell"></i> Confirm Reservation
+            </button>
+          </form>
+          <div class="res-card-footer">
+            <i class="fa-solid fa-phone"></i>
+            <span>+1 (800) MAISON-NOIR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to Explore</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>Michelin Star Dining</span>
+        <span class="marquee-dot">◆</span>
+        <span>Private Events</span>
+        <span class="marquee-dot">◆</span>
+        <span>Award Winning Cuisine</span>
+        <span class="marquee-dot">◆</span>
+        <span>Premium Wine Cellar</span>
+        <span class="marquee-dot">◆</span>
+        <span>Chef's Table Experience</span>
+        <span class="marquee-dot">◆</span>
+        <span>Luxury Dining</span>
+        <span class="marquee-dot">◆</span>
+        <span>Seasonal Tasting Menu</span>
+        <span class="marquee-dot">◆</span>
+        <span>Exclusive Membership</span>
+        <span class="marquee-dot">◆</span>
+        <!-- Duplicate for infinite scroll -->
+        <span>Michelin Star Dining</span>
+        <span class="marquee-dot">◆</span>
+        <span>Private Events</span>
+        <span class="marquee-dot">◆</span>
+        <span>Award Winning Cuisine</span>
+        <span class="marquee-dot">◆</span>
+        <span>Premium Wine Cellar</span>
+        <span class="marquee-dot">◆</span>
+        <span>Chef's Table Experience</span>
+        <span class="marquee-dot">◆</span>
+        <span>Luxury Dining</span>
+        <span class="marquee-dot">◆</span>
+        <span>Seasonal Tasting Menu</span>
+        <span class="marquee-dot">◆</span>
+        <span>Exclusive Membership</span>
+        <span class="marquee-dot">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="about-image-wrap">
+            <img src="images/about_dining.png" alt="Fine Dining Experience" class="about-img" loading="lazy" />
+            <div class="about-badge glass-card">
+              <span class="badge-number">Since</span>
+              <span class="badge-year">2009</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="section-tag">
+            <span class="gold-line"></span>
+            <span>Our Story</span>
+          </div>
+          <h2 class="section-heading">An Experience <em>Beyond</em> Dining</h2>
+          <p class="section-text">Maison Noir blends world-class cuisine with timeless elegance. Every dish is handcrafted using premium ingredients sourced from around the world, guided by culinary masters who have trained in the finest kitchens across Europe and Asia.</p>
+          <p class="section-text">We believe that dining is not merely sustenance — it is a ceremony, an art form, a story told through flavour, texture, and presentation. Welcome to your table.</p>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="20">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Award Winning Chefs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="15">0</span>
+              <span class="stat-suffix">+</span>
+              <span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5</span>
+              <span class="stat-suffix">★</span>
+              <span class="stat-label">Luxury Dining</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="100">0</span>
+              <span class="stat-suffix">K+</span>
+              <span class="stat-label">Guests Served</span>
+            </div>
+          </div>
+
+          <a href="#about-story" class="btn btn-ghost btn-animated">
+            <span>Discover Our Story</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DISHES -->
+  <section class="dishes-section section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Signature Dishes</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">Culinary <em>Masterpieces</em></h2>
+        <p class="section-sub">Each creation tells a story of passion, precision, and the finest ingredients from around the globe.</p>
+      </div>
+
+      <div class="dishes-grid">
+        <div class="dish-card reveal-up" style="--delay:0s">
+          <div class="dish-image-wrap">
+            <img src="images/dish_truffle_steak.png" alt="Truffle Steak" loading="lazy" />
+            <div class="dish-overlay">
+              <span class="dish-tag">Chef's Special</span>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-top">
+              <h3 class="dish-name">Truffle Steak</h3>
+              <span class="dish-price">$185</span>
+            </div>
+            <p class="dish-desc">Prime wagyu beef with black truffle shavings, aged parmesan foam, and truffle jus.</p>
+            <div class="dish-footer">
+              <span class="dish-category"><i class="fa-solid fa-fire"></i> Main Course</span>
+              <button class="dish-btn btn-shine">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal-up" style="--delay:0.1s">
+          <div class="dish-image-wrap">
+            <img src="images/dish_lobster.png" alt="Lobster Royale" loading="lazy" />
+            <div class="dish-overlay">
+              <span class="dish-tag">Signature</span>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-top">
+              <h3 class="dish-name">Lobster Royale</h3>
+              <span class="dish-price">$220</span>
+            </div>
+            <p class="dish-desc">Whole Nova Scotia lobster, saffron bisque, caviar pearls, gold butter beurre blanc.</p>
+            <div class="dish-footer">
+              <span class="dish-category"><i class="fa-solid fa-shrimp"></i> Seafood</span>
+              <button class="dish-btn btn-shine">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal-up" style="--delay:0.2s">
+          <div class="dish-image-wrap">
+            <img src="images/dish_wagyu.png" alt="Golden Wagyu" loading="lazy" />
+            <div class="dish-overlay">
+              <span class="dish-tag">Exclusive</span>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-top">
+              <h3 class="dish-name">Golden Wagyu</h3>
+              <span class="dish-price">$310</span>
+            </div>
+            <p class="dish-desc">A5 Japanese Wagyu with gold leaf, yuzu foam, seasonal vegetables, and demi-glace.</p>
+            <div class="dish-footer">
+              <span class="dish-category"><i class="fa-solid fa-crown"></i> Premium</span>
+              <button class="dish-btn btn-shine">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal-up" style="--delay:0.3s">
+          <div class="dish-image-wrap">
+            <img src="images/dish_pasta.png" alt="Black Pearl Pasta" loading="lazy" />
+            <div class="dish-overlay">
+              <span class="dish-tag">Artisanal</span>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-top">
+              <h3 class="dish-name">Black Pearl Pasta</h3>
+              <span class="dish-price">$95</span>
+            </div>
+            <p class="dish-desc">Handmade squid ink tagliatelle, Ossetra caviar, crustacean bisque, chervil oil.</p>
+            <div class="dish-footer">
+              <span class="dish-category"><i class="fa-solid fa-leaf"></i> Artisanal</span>
+              <button class="dish-btn btn-shine">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card reveal-up" style="--delay:0.4s">
+          <div class="dish-image-wrap">
+            <img src="images/dish_seafood_tower.png" alt="Royal Seafood Tower" loading="lazy" />
+            <div class="dish-overlay">
+              <span class="dish-tag">For Two</span>
+            </div>
+          </div>
+          <div class="dish-info">
+            <div class="dish-top">
+              <h3 class="dish-name">Royal Seafood Tower</h3>
+              <span class="dish-price">$395</span>
+            </div>
+            <p class="dish-desc">King crab, oysters, tiger prawns, scallops, langoustines on a grand silver tier.</p>
+            <div class="dish-footer">
+              <span class="dish-category"><i class="fa-solid fa-water"></i> Seafood</span>
+              <button class="dish-btn btn-shine">Order Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="dish-card dish-card-cta reveal-up" style="--delay:0.5s">
+          <div class="dish-cta-inner">
+            <div class="gold-ornament large">◆</div>
+            <h3>Explore Full Menu</h3>
+            <p>Discover our complete collection of handcrafted dishes, seasonal specials, and tasting menus.</p>
+            <a href="#menu-preview" class="btn btn-gold btn-shine">View Full Menu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEF SECTION -->
+  <section class="chef-section section" id="chef">
+    <div class="chef-bg-pattern"></div>
+    <div class="container">
+      <div class="chef-grid">
+        <div class="chef-image-col reveal-left">
+          <div class="chef-image-wrap">
+            <img src="images/chef_portrait.png" alt="Executive Chef" class="chef-img" loading="lazy" />
+            <div class="chef-awards-float glass-card">
+              <div class="chef-award"><i class="fa-solid fa-star gold"></i><span>3 Michelin Stars</span></div>
+              <div class="chef-award"><i class="fa-solid fa-trophy gold"></i><span>World's 50 Best</span></div>
+              <div class="chef-award"><i class="fa-solid fa-medal gold"></i><span>James Beard Award</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chef-content reveal-right">
+          <div class="section-tag">
+            <span class="gold-line"></span>
+            <span>Meet The Chef</span>
+          </div>
+          <h2 class="section-heading">Chef <em>Alexandre</em> Dumont</h2>
+          <div class="chef-quote">
+            <i class="fa-solid fa-quote-left"></i>
+            <blockquote>"Cooking is an art. Every ingredient deserves perfection. At Maison Noir, we do not prepare food — we compose symphonies."</blockquote>
+            <div class="chef-signature">— Alexandre Dumont</div>
+          </div>
+          <p class="section-text">With over 25 years of experience across Paris, Tokyo, and New York, Chef Alexandre Dumont has mastered the art of French haute cuisine fused with global influences. He has trained under legendary chefs and earned three Michelin stars by the age of 38.</p>
+
+          <div class="chef-credentials">
+            <div class="credential-item">
+              <span class="credential-num">25+</span>
+              <span class="credential-label">Years in Fine Dining</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-num">3</span>
+              <span class="credential-label">Michelin Stars</span>
+            </div>
+            <div class="credential-item">
+              <span class="credential-num">12</span>
+              <span class="credential-label">International Awards</span>
+            </div>
+          </div>
+          <a href="#experiences" class="btn btn-ghost btn-animated">
+            <span>Chef's Table Experience</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCES SECTION -->
+  <section class="experiences-section section" id="experiences">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Fine Dining Experiences</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">Beyond <em>Ordinary</em></h2>
+        <p class="section-sub">Tailored experiences for every occasion — from intimate dinners to grand celebrations.</p>
+      </div>
+
+      <div class="experiences-grid">
+        <div class="exp-card reveal-up" style="--delay:0s">
+          <div class="exp-image-wrap">
+            <img src="images/private_dining.png" alt="Private Dining" loading="lazy" />
+            <div class="exp-image-overlay"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-icon"><i class="fa-solid fa-door-open"></i></div>
+            <h3>Private Dining</h3>
+            <p>Exclusive rooms for intimate celebrations, business dinners, and romantic evenings. Complete privacy, dedicated staff.</p>
+            <a href="#reservation" class="exp-link">Reserve <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="exp-card reveal-up" style="--delay:0.1s">
+          <div class="exp-image-wrap">
+            <img src="images/gallery_bar.png" alt="Wine Collection" loading="lazy" />
+            <div class="exp-image-overlay"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-icon"><i class="fa-solid fa-wine-glass-empty"></i></div>
+            <h3>Wine Collection</h3>
+            <p>Over 1,200 labels from the world's finest vineyards. Our sommelier curates perfect pairings for your menu.</p>
+            <a href="#reservation" class="exp-link">Discover <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="exp-card reveal-up" style="--delay:0.2s">
+          <div class="exp-image-wrap">
+            <img src="images/wine_collection.png" alt="Chef's Table" loading="lazy" />
+            <div class="exp-image-overlay"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-icon"><i class="fa-solid fa-hat-chef"></i></div>
+            <h3>Chef's Table</h3>
+            <p>An unparalleled 12-course tasting menu created personally by Chef Alexandre. Seats strictly limited.</p>
+            <a href="#reservation" class="exp-link">Apply <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="exp-card reveal-up" style="--delay:0.3s">
+          <div class="exp-image-wrap">
+            <img src="images/about_dining.png" alt="Luxury Events" loading="lazy" />
+            <div class="exp-image-overlay"></div>
+          </div>
+          <div class="exp-content">
+            <div class="exp-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h3>Luxury Events</h3>
+            <p>Weddings, corporate galas, and bespoke VIP events. We create extraordinary moments for life's milestone celebrations.</p>
+            <a href="#reservation" class="exp-link">Plan Event <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Gallery</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">A Visual <em>Journey</em></h2>
+        <p class="section-sub">Every frame captures the essence of luxury, craftsmanship, and culinary artistry.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item large reveal-up" style="--delay:0s">
+          <img src="images/hero_interior.png" alt="Restaurant Interior" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@maisonnoir</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.05s">
+          <img src="images/dish_truffle_steak.png" alt="Truffle Steak" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.1s">
+          <img src="images/dish_lobster.png" alt="Lobster Royale" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item tall reveal-up" style="--delay:0.15s">
+          <img src="images/chef_portrait.png" alt="Chef Alexandre" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.2s">
+          <img src="images/dish_wagyu.png" alt="Golden Wagyu" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.25s">
+          <img src="images/gallery_dessert.png" alt="Dessert" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.3s">
+          <img src="images/gallery_bar.png" alt="Bar" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" style="--delay:0.35s">
+          <img src="images/wine_collection.png" alt="Wine Cellar" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="gallery-item large reveal-up" style="--delay:0.4s">
+          <img src="images/private_dining.png" alt="Private Dining" loading="lazy" />
+          <div class="gallery-hover">
+            <i class="fa-brands fa-instagram"></i>
+            <span>@maisonnoir</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AWARDS SECTION -->
+  <section class="awards-section section" id="awards">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Recognition</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">World-Class <em>Awards</em></h2>
+      </div>
+      <div class="awards-grid">
+        <div class="award-card glass-card reveal-up" style="--delay:0s">
+          <div class="award-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="award-name">Michelin Guide</div>
+          <div class="award-title">3-Star Excellence</div>
+          <div class="award-year">2019 – 2024</div>
+        </div>
+        <div class="award-card glass-card reveal-up" style="--delay:0.1s">
+          <div class="award-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div class="award-name">World's 50 Best</div>
+          <div class="award-title">Top 10 Restaurants</div>
+          <div class="award-year">2022 & 2023</div>
+        </div>
+        <div class="award-card glass-card reveal-up" style="--delay:0.2s">
+          <div class="award-icon"><i class="fa-solid fa-medal"></i></div>
+          <div class="award-name">James Beard</div>
+          <div class="award-title">Outstanding Chef Award</div>
+          <div class="award-year">2021</div>
+        </div>
+        <div class="award-card glass-card reveal-up" style="--delay:0.3s">
+          <div class="award-icon"><i class="fa-solid fa-crown"></i></div>
+          <div class="award-name">Golden Fork</div>
+          <div class="award-title">Best Fine Dining</div>
+          <div class="award-year">2020 & 2024</div>
+        </div>
+        <div class="award-card glass-card reveal-up" style="--delay:0.4s">
+          <div class="award-icon"><i class="fa-solid fa-wine-bottle"></i></div>
+          <div class="award-name">Wine Spectator</div>
+          <div class="award-title">Grand Award Wine List</div>
+          <div class="award-year">2018 – 2024</div>
+        </div>
+        <div class="award-card glass-card reveal-up" style="--delay:0.5s">
+          <div class="award-icon"><i class="fa-solid fa-gem"></i></div>
+          <div class="award-name">Condé Nast</div>
+          <div class="award-title">World's Best Restaurant</div>
+          <div class="award-year">2023 & 2024</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-section section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Guest Experiences</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">Words From Our <em>Guests</em></h2>
+      </div>
+
+      <div class="testimonials-slider" id="testimonialsSlider">
+        <div class="testimonials-track" id="testimonialsTrack">
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"An absolutely transcendent experience. The truffle steak is the finest dish I have ever tasted. Maison Noir rivals any restaurant in the world."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">JR</div>
+              <div class="testi-info">
+                <strong>James Richardson</strong>
+                <span>CEO · London, UK</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"We celebrated our anniversary here and it was utterly magical. Every detail — from the candles to the Champagne — was perfection. We will return every year."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">SC</div>
+              <div class="testi-info">
+                <strong>Sophie Chen</strong>
+                <span>Architect · Paris, France</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"The Chef's Table is an experience unlike any other. Watching Chef Alexandre work is like watching a master painter. Truly extraordinary."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">KM</div>
+              <div class="testi-info">
+                <strong>Kenji Matsuda</strong>
+                <span>Entrepreneur · Tokyo, Japan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"We hosted our entire board dinner here. The private dining room is spectacular. Service is impeccable. Maison Noir defines what luxury hospitality should be."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">AL</div>
+              <div class="testi-info">
+                <strong>Amelia Laurent</strong>
+                <span>Investment Banker · New York, USA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testi-stars">★★★★★</div>
+            <blockquote>"The wine pairing was extraordinary. Our sommelier guided us through a journey of flavours I didn't know was possible. Exceptional in every way."</blockquote>
+            <div class="testi-author">
+              <div class="testi-avatar">RP</div>
+              <div class="testi-info">
+                <strong>Rajiv Patel</strong>
+                <span>Luxury Traveller · Mumbai, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-controls">
+        <button class="testi-btn" id="testiPrev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" id="testiNext" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU PREVIEW -->
+  <section class="menu-preview-section section" id="menu-preview">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>Menu Preview</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">Crafted With <em>Passion</em></h2>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="starters" id="tabStarters">Starters</button>
+        <button class="menu-tab" data-tab="mains" id="tabMains">Main Course</button>
+        <button class="menu-tab" data-tab="desserts" id="tabDesserts">Desserts</button>
+        <button class="menu-tab" data-tab="wine" id="tabWine">Wine</button>
+      </div>
+
+      <div class="menu-content">
+        <div class="menu-panel active" id="panel-starters">
+          <div class="menu-item"><span class="mi-name">Foie Gras Torchon</span><span class="mi-dots"></span><span class="mi-price">$65</span></div>
+          <div class="menu-item"><span class="mi-name">Oysters Rockefeller</span><span class="mi-dots"></span><span class="mi-price">$55</span></div>
+          <div class="menu-item"><span class="mi-name">Beluga Caviar & Blini</span><span class="mi-dots"></span><span class="mi-price">$120</span></div>
+          <div class="menu-item"><span class="mi-name">Burrata & Heritage Tomato</span><span class="mi-dots"></span><span class="mi-price">$42</span></div>
+          <div class="menu-item"><span class="mi-name">Lobster Bisque</span><span class="mi-dots"></span><span class="mi-price">$48</span></div>
+          <div class="menu-item"><span class="mi-name">Scallop Ceviche</span><span class="mi-dots"></span><span class="mi-price">$58</span></div>
+        </div>
+        <div class="menu-panel" id="panel-mains">
+          <div class="menu-item"><span class="mi-name">Truffle Steak</span><span class="mi-dots"></span><span class="mi-price">$185</span></div>
+          <div class="menu-item"><span class="mi-name">Lobster Royale</span><span class="mi-dots"></span><span class="mi-price">$220</span></div>
+          <div class="menu-item"><span class="mi-name">Golden Wagyu A5</span><span class="mi-dots"></span><span class="mi-price">$310</span></div>
+          <div class="menu-item"><span class="mi-name">Black Pearl Pasta</span><span class="mi-dots"></span><span class="mi-price">$95</span></div>
+          <div class="menu-item"><span class="mi-name">Duck Confit Royale</span><span class="mi-dots"></span><span class="mi-price">$110</span></div>
+          <div class="menu-item"><span class="mi-name">Sea Bass en Papillote</span><span class="mi-dots"></span><span class="mi-price">$130</span></div>
+        </div>
+        <div class="menu-panel" id="panel-desserts">
+          <div class="menu-item"><span class="mi-name">Chocolate Noir Sphere</span><span class="mi-dots"></span><span class="mi-price">$45</span></div>
+          <div class="menu-item"><span class="mi-name">Crème Brûlée Royal</span><span class="mi-dots"></span><span class="mi-price">$38</span></div>
+          <div class="menu-item"><span class="mi-name">Soufflé Grand Marnier</span><span class="mi-dots"></span><span class="mi-price">$52</span></div>
+          <div class="menu-item"><span class="mi-name">Tarte Tatin Caramel</span><span class="mi-dots"></span><span class="mi-price">$40</span></div>
+          <div class="menu-item"><span class="mi-name">Mille-Feuille Vanille</span><span class="mi-dots"></span><span class="mi-price">$44</span></div>
+          <div class="menu-item"><span class="mi-name">Macaron Selection</span><span class="mi-dots"></span><span class="mi-price">$35</span></div>
+        </div>
+        <div class="menu-panel" id="panel-wine">
+          <div class="menu-item"><span class="mi-name">Château Pétrus 2015</span><span class="mi-dots"></span><span class="mi-price">$890</span></div>
+          <div class="menu-item"><span class="mi-name">Dom Pérignon Vintage</span><span class="mi-dots"></span><span class="mi-price">$450</span></div>
+          <div class="menu-item"><span class="mi-name">Opus One Napa Valley</span><span class="mi-dots"></span><span class="mi-price">$380</span></div>
+          <div class="menu-item"><span class="mi-name">Sassicaia Bolgheri</span><span class="mi-dots"></span><span class="mi-price">$320</span></div>
+          <div class="menu-item"><span class="mi-name">Krug Grande Cuvée</span><span class="mi-dots"></span><span class="mi-price">$290</span></div>
+          <div class="menu-item"><span class="mi-name">Cristal Roederer 2013</span><span class="mi-dots"></span><span class="mi-price">$510</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION SECTION -->
+  <section class="reservation-section section" id="reservation">
+    <div class="res-bg">
+      <img src="images/about_dining.png" alt="Reservation" />
+      <div class="res-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="reservation-grid">
+        <div class="res-form-col reveal-left">
+          <div class="section-tag">
+            <span class="gold-line"></span>
+            <span>Reservations</span>
+          </div>
+          <h2 class="section-heading">Reserve Your <em>Table</em></h2>
+          <p class="section-text">Secure your exclusive dining experience. We recommend booking at least 2 weeks in advance for the Chef's Table.</p>
+
+          <form class="res-form" id="reservationForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-name">Full Name</label>
+                <input type="text" id="res-name" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <label for="res-email">Email Address</label>
+                <input type="email" id="res-email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-date">Preferred Date</label>
+                <input type="date" id="res-date" required />
+              </div>
+              <div class="form-group">
+                <label for="res-time">Preferred Time</label>
+                <select id="res-time">
+                  <option>6:30 PM</option>
+                  <option>7:00 PM</option>
+                  <option>7:30 PM</option>
+                  <option>8:00 PM</option>
+                  <option>8:30 PM</option>
+                  <option>9:00 PM</option>
+                  <option>9:30 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="res-guests">Number of Guests</label>
+                <select id="res-guests">
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                  <option>5 Guests</option>
+                  <option>6 Guests</option>
+                  <option>7+ Guests (Private Event)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="res-occasion">Occasion</label>
+                <select id="res-occasion">
+                  <option>Regular Dining</option>
+                  <option>Anniversary</option>
+                  <option>Birthday</option>
+                  <option>Business Dinner</option>
+                  <option>Wedding</option>
+                  <option>Chef's Table</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label for="res-message">Special Requests</label>
+              <textarea id="res-message" rows="3" placeholder="Dietary requirements, allergies, special arrangements..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full btn-shine" id="reserveSubmitBtn">
+              <i class="fa-solid fa-concierge-bell"></i>
+              <span>Reserve My Table</span>
+            </button>
+          </form>
+        </div>
+
+        <div class="res-info-col reveal-right">
+          <div class="res-info-card glass-card">
+            <h3>Contact & Location</h3>
+            <div class="res-info-item">
+              <div class="res-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Address</strong>
+                <span>12 Rue de la Paix, Paris, France 75001</span>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <div class="res-info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Telephone</strong>
+                <span>+1 (800) MAISON-NOIR</span>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <div class="res-info-icon"><i class="fa-regular fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>reservations@maisonnoir.com</span>
+              </div>
+            </div>
+
+            <div class="res-hours">
+              <h4><i class="fa-regular fa-clock"></i> Opening Hours</h4>
+              <div class="hours-grid">
+                <span>Monday – Thursday</span><span>6:30 PM – 11:00 PM</span>
+                <span>Friday – Saturday</span><span>6:00 PM – 12:00 AM</span>
+                <span>Sunday</span><span>6:30 PM – 10:30 PM</span>
+              </div>
+            </div>
+
+            <div class="res-info-item">
+              <div class="res-info-icon gold"><i class="fa-solid fa-crown"></i></div>
+              <div>
+                <strong>Dress Code</strong>
+                <span>Smart Elegant Attire Required</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section section" id="faq">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag center">
+          <span class="gold-line"></span>
+          <span>FAQ</span>
+          <span class="gold-line"></span>
+        </div>
+        <h2 class="section-heading">Frequently Asked <em>Questions</em></h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq1">
+            <span>How far in advance should I book?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">We recommend booking 2–4 weeks in advance for regular dining, and up to 8 weeks for the Chef's Table experience or private events.</div>
+        </div>
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq2">
+            <span>What is the dress code?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">We require smart elegant attire for all guests. Formal business wear or elegant evening dress is recommended. We kindly ask guests to avoid casual sportswear.</div>
+        </div>
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq3">
+            <span>Do you accommodate dietary requirements?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">Absolutely. Our culinary team can accommodate vegetarian, vegan, gluten-free, and most allergy requirements. Please inform us at the time of booking.</div>
+        </div>
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq4">
+            <span>Is there a cancellation policy?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">Reservations can be cancelled up to 48 hours before without charge. Late cancellations or no-shows may incur a fee of $75 per guest.</div>
+        </div>
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq5">
+            <span>Can I host a private event at Maison Noir?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">Yes — we offer exclusive hire of our private dining rooms and the full restaurant for weddings, corporate events, and celebrations. Contact our events team for a bespoke proposal.</div>
+        </div>
+        <div class="faq-item reveal-up">
+          <div class="faq-question" id="faq6">
+            <span>What is the Chef's Table experience?</span>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">The Chef's Table is an intimate 12-course tasting menu experience prepared personally by Chef Alexandre Dumont, with front-row views of our kitchen. Limited to 6 guests per evening.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-top">
+      <div class="footer-particles"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="Maison Noir" class="footer-logo" />
+            <p>Where Culinary Art Meets Timeless Luxury. Experience the pinnacle of fine dining at Maison Noir.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="TripAdvisor"><i class="fa-brands fa-tripadvisor"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#menu">Signature Dishes</a></li>
+              <li><a href="#chef">Meet the Chef</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#awards">Awards</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Experiences</h4>
+            <ul>
+              <li><a href="#experiences">Private Dining</a></li>
+              <li><a href="#experiences">Chef's Table</a></li>
+              <li><a href="#experiences">Wine Collection</a></li>
+              <li><a href="#experiences">Luxury Events</a></li>
+              <li><a href="#reservation">Reservations</a></li>
+              <li><a href="#faq">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-newsletter">
+            <h4>Exclusive Access</h4>
+            <p>Join our inner circle for exclusive previews, seasonal menus, and VIP invitations.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Your email address" required />
+              <button type="submit" class="btn btn-gold btn-shine">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+            <div class="footer-contact-info">
+              <p><i class="fa-solid fa-phone"></i> +1 (800) MAISON-NOIR</p>
+              <p><i class="fa-regular fa-envelope"></i> hello@maisonnoir.com</p>
+              <p><i class="fa-solid fa-location-dot"></i> 12 Rue de la Paix, Paris</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>© 2024 Maison Noir. All rights reserved. Crafted with <span class="gold">◆</span> excellence.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box glass-card">
+      <div class="modal-icon"><i class="fa-solid fa-check-circle"></i></div>
+      <h3>Reservation Confirmed!</h3>
+      <p>Thank you for choosing Maison Noir. We will contact you shortly to confirm your exclusive dining experience.</p>
+      <button class="btn btn-gold btn-shine" id="modalClose">Perfect, Thank You</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
